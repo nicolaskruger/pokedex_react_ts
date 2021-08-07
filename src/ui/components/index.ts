@@ -1,0 +1,1 @@
+export * from "./pokedex/pokedex.component";

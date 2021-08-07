@@ -1,7 +1,19 @@
 .App {
   text-align: center;
-}
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
 
+  background-image: url("./pokemon.jpg");
+}
+.App__div {
+  width: 900px;
+  height: 600px;
+  overflow: hidden;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
