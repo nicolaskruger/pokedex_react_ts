@@ -13,3 +13,5 @@ const store = createStore(
         ...middleWare
     )
 )
+
+export { store }

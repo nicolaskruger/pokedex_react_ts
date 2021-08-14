@@ -10,7 +10,9 @@ type PokemonDomain = {
     abilities: Ability[]
 }
 type Ability = {
-    name: string
+    ability: {
+        name: string
+    }
 }
 
 export type { PokemonDomain }

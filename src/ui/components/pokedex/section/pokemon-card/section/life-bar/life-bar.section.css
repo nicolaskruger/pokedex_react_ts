@@ -1,0 +1,8 @@
+.LifeBarSection {
+  background-color: black;
+  width: 50px;
+  padding: 1px;
+  height: 5px;
+  display: flex;
+  align-items: center;
+}

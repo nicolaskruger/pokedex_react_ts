@@ -1,0 +1,13 @@
+.PokemonCard {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  align-items: center;
+  justify-content: center;
+  background-color: lightblue;
+  border-radius: 10px;
+  padding-bottom: 3px;
+}
+.PokemonCard__img {
+  width: 100px;
+}

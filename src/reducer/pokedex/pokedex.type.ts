@@ -1,5 +1,5 @@
 enum POKEDEX_TYPE {
-
+    SET_POKEDEX,
 }
 
 export { POKEDEX_TYPE }

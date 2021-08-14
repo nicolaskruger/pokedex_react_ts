@@ -1,7 +1,15 @@
+:root {
+  --pokedex-heigth: 300px;
+  --pokedex-button-heigth: 30px;
+  --pokedex-calc-heigth: calc(
+    var(--pokedex-heigth) - var(--pokedex-button-heigth)
+  );
+  --pokedex-calc-calc-heigth: calc(100% - var(--pokedex-button-heigth));
+}
 .Pokedex {
   position: relative;
   width: 100%;
-  height: 300px;
+  height: var(--pokedex-heigth);
   transition: 0.5s;
   transform: translateY(250px);
 }
@@ -12,21 +20,47 @@
   display: flex;
 }
 .Pokedex__Info {
-  height: 100%;
+  padding-top: 5px;
+  height: var(--pokedex-calc-heigth);
   background-color: red;
+  padding: 10px;
 }
 .Pokedex__openCloseBtn {
   background-color: red;
   width: 70px;
   margin: 0;
-  padding: 10px 10px 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 0;
   border-radius: 10px 10px 0 0;
   cursor: pointer;
+  height: var(--pokedex-button-heigth);
 }
 .Pokedex__button__icon {
   transition: 0.5s;
 }
 .Pokedex__button__icon__down {
   transform: rotate(180deg);
+}
+.Pokedex__Nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 5px;
+}
+.Pokedex__button {
+  margin: 0;
+  border: 0;
+  height: var(--pokedex-button-heigth);
+  background-color: lightblue;
+  border-radius: 10px 10px 0 0;
+  cursor: pointer;
+}
+.Pokedex__button_selected {
+  background-color: brown;
+}
+.Pokedex__content {
+  width: 100%;
+  height: var(--pokedex-calc-calc-heigth);
+  background-color: brown;
 }

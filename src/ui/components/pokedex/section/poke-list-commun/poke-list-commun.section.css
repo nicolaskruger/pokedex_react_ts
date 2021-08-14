@@ -1,0 +1,14 @@
+.PokeListCommunSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  height: 100%;
+}
+.PokedexListCommunSection__button {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  background-color: rgba(187, 210, 230, 0);
+}

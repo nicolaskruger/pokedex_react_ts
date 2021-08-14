@@ -1,0 +1,1 @@
+export * from "./set-pokedex.hook.function";

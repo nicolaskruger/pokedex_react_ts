@@ -1,5 +1,4 @@
-import { EnumDictionary } from "../../util";
-import { PokedexFunction } from "./function";
+import { setPokedex } from "./function";
 import { PokedexAction } from "./pokedex.action";
 import { PokedexReducerState } from "./pokedex.state";
 import { POKEDEX_TYPE } from "./pokedex.type";
@@ -7,13 +6,21 @@ import { POKEDEX_TYPE } from "./pokedex.type";
 const pokedexReducer = (state: PokedexReducerState | undefined, action: PokedexAction): PokedexReducerState => {
 
 
-    const { } = POKEDEX_TYPE;
+    const realState = state as PokedexReducerState;
 
-    const dic: EnumDictionary<POKEDEX_TYPE, PokedexFunction> = {
+    const { SET_POKEDEX } = POKEDEX_TYPE;
 
+    const { type } = action;
+
+
+    switch (type) {
+        case SET_POKEDEX:
+            return setPokedex(realState, action);
+
+        default:
+            return { ...realState }
     }
 
-    return { ...state }
 }
 
 export { pokedexReducer }
