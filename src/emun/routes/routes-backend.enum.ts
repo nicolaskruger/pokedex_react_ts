@@ -1,5 +1,5 @@
 const ROUTES_BACKEND_ENUM = {
-    POKEMON: 'pokemon/'
+    POKEMON: 'pokemon'
 }
 
 export { ROUTES_BACKEND_ENUM }

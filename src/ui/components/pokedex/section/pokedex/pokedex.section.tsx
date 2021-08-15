@@ -1,45 +1,53 @@
+import { useEffect } from "react";
+import { connect, ConnectedProps } from "react-redux";
 import { PokemonDomain } from "../../../../../domain"
-import { PokeListCommunSection } from "../poke-list-commun/poke-list-commun.section"
+import { usePokedex } from "../../../../../hooks";
+import { pokedexProps } from "../../../../../reducer";
+import { ActiveOper, PokeListCommunSection } from "../poke-list-commun/poke-list-commun.section"
 import "./pokedex.section.css";
 
-const PokedexSection = () => {
+const connector = connect(pokedexProps, {})
 
-    const pokemon: PokemonDomain = {
-        abilities: [
-            {
-                "ability": {
-                    "name": "overgrow",
+type PokedexSectionProps = ConnectedProps<typeof connector>
 
-                }
-            },
-            {
-                "ability": {
-                    "name": "chlorophyll",
-                }
-            }
-        ],
-        name: "bulbasaur",
-        base_experience: 64,
-        life: 50,
-        nick_name: "bulba",
-        sprites: {
-            back_default: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png",
-            front_default: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
+const PokedexSectio = ({ pokedex }: PokedexSectionProps) => {
+
+    const pokedexHook = usePokedex();
+
+    const { next, previous: previus } = pokedex;
+
+
+    const nextObj: ActiveOper = {
+        active: !!next,
+        oper: () => {
+            if (next)
+                pokedexHook.nextPokedex()
         }
     }
 
-    const pokelist = 'a'.repeat(6).split('')
-        .map(v => pokemon)
+    const prevObj: ActiveOper = {
+        active: !!previus,
+        oper: () => {
+            if (previus)
+                pokedexHook.prevPokedex()
+        }
+    }
+
+    useEffect(() => {
+        pokedexHook.setPokedex();
+    }, [])
 
     return (
         <div className="PokedexSection" >
             <PokeListCommunSection
-                pokemons={pokelist}
-                next={() => { }}
-                prev={() => { }}
+                pokemons={pokedex.resultDetail as PokemonDomain[] || []}
+                next={nextObj}
+                prev={prevObj}
                 onClick={(poke) => { }} />
         </div>
     )
 }
+
+const PokedexSection = connector(PokedexSectio);
 
 export { PokedexSection }

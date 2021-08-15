@@ -1,15 +1,17 @@
-import { PokeListDto } from "../../dtos"
+import { PokeListDto, PokemonDto } from "../../dtos"
 
 type PokedexReducerState = {
     pokedex: PokeListDto
 }
 
+const results: PokemonDto[] = []
+
 const InithialState: PokedexReducerState = {
     pokedex: {
         count: 0,
         next: "",
-        previus: "",
-        result: []
+        previous: "",
+        results
     }
 }
 

@@ -1,8 +1,6 @@
-import { useState } from "react"
-import { Provider } from "react-redux";
+import { useState } from "react";
 import { ExpandLess } from "../../../assets";
-import { store } from "../../../store";
-import "./pokedex.component.css"
+import "./pokedex.component.css";
 import { PokedexSection, PokeListSection } from "./section";
 
 enum POKEDEX_STATE {
@@ -50,36 +48,34 @@ const PokedexComponent = () => {
     }
 
     return (
-        <Provider store={store} >
-            <div className={`Pokedex ${open && "PokedexOpen"}`}>
-                <div className="Pokedex__header">
-                    <button className="Pokedex__openCloseBtn" onClick={() => setOpen(!open)}>
-                        <div className={`Pokedex__button__icon ${open && "Pokedex__button__icon__down"}`}>
-                            <ExpandLess />
-                        </div>
-                    </button>
-                </div>
-                <div className="Pokedex__Info">
-                    <nav className="Pokedex__Nav">
-                        <button
-                            className={`Pokedex__button ${isPokedex()}`}
-                            onClick={setPokedex}
-                        >
-                            pokedex
-                        </button>
-                        <button
-                            className={`Pokedex__button ${isMyPokemons()}`}
-                            onClick={setMyPokemons}
-                        >
-                            my pokemon
-                        </button>
-                    </nav>
-                    <div className="Pokedex__content">
-                        {render()}
+        <div className={`Pokedex ${open && "PokedexOpen"}`}>
+            <div className="Pokedex__header">
+                <button className="Pokedex__openCloseBtn" onClick={() => setOpen(!open)}>
+                    <div className={`Pokedex__button__icon ${open && "Pokedex__button__icon__down"}`}>
+                        <ExpandLess />
                     </div>
+                </button>
+            </div>
+            <div className="Pokedex__Info">
+                <nav className="Pokedex__Nav">
+                    <button
+                        className={`Pokedex__button ${isPokedex()}`}
+                        onClick={setPokedex}
+                    >
+                        pokedex
+                    </button>
+                    <button
+                        className={`Pokedex__button ${isMyPokemons()}`}
+                        onClick={setMyPokemons}
+                    >
+                        my pokemon
+                    </button>
+                </nav>
+                <div className="Pokedex__content">
+                    {render()}
                 </div>
             </div>
-        </Provider>
+        </div>
     )
 }
 
