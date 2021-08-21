@@ -1,5 +1,6 @@
-import { useNextPokedex, useSetPokedex } from "./function"
+import { useAddPokemon, useNextPokedex, useSetPokedex } from "./function"
 import { usePrevPokedex } from "./function/prev-pokedex.hook.function";
+import { useGetInithislPokemons } from "./function/set-inithial-pokemons.hook.function";
 
 const usePokedex = () => {
 
@@ -9,10 +10,16 @@ const usePokedex = () => {
 
     const prevPokedex = usePrevPokedex();
 
+    const getInithialPokemon = useGetInithislPokemons();
+
+    const addPokemon = useAddPokemon();
+
     return {
         setPokedex,
         prevPokedex,
-        nextPokedex
+        nextPokedex,
+        getInithialPokemon,
+        addPokemon
     }
 }
 

@@ -1,6 +1,6 @@
 import { NextIcon, PreviousIcon } from "../../../../../assets";
 import { PokemonDomain } from "../../../../../domain";
-import { SimpleLoader } from "../../../loader";
+import { PokemonListComponent } from "../../../pokemon-list/pokemon-list.component";
 import { PokemonCardSection } from "../pokemon-card/pokemon-card.section";
 import "./poke-list-commun.section.css";
 
@@ -27,11 +27,13 @@ const PokeListCommunSection = (props: PokeListCommunProps) => {
                 <PreviousIcon active={prev.active} />
             </button>
 
-            {pokemons.map((poke, index) => (
-                <button className="PokedexListCommunSection__button" key={index} onClick={() => onClick(poke)}>
-                    <PokemonCardSection pokemon={poke} />
-                </button>
-            ))}
+            <PokemonListComponent
+                div="PokeListCommunSection"
+                button="PokedexListCommunSection__button"
+                Card={PokemonCardSection}
+                onClick={onClick}
+                pokemons={pokemons}
+            />
 
             <button className="PokedexListCommunSection__button" onClick={next.oper} >
                 <NextIcon active={next.active} />

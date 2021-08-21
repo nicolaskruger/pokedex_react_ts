@@ -1,0 +1,9 @@
+.pokemon-inithial-section {
+  width: 150px;
+  border-radius: 10px;
+  background-color: rgb(182, 76, 76);
+  padding: 2px;
+}
+.pokemon-inithial-section__img {
+  width: 150px;
+}

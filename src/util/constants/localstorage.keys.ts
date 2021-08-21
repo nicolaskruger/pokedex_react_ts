@@ -1,0 +1,5 @@
+const LOCAL_STORAGE_KEYS = {
+    POKEDEX: "POKEDEX"
+}
+
+export { LOCAL_STORAGE_KEYS };

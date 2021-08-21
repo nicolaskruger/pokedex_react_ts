@@ -7,7 +7,6 @@ const useLocalStorage = <T>(initVal: T, name: string): [T, (n: T) => void] => {
     const setLocalStorege = (val: T, name: string) => {
         localStorage.setItem(name, JSON.stringify(val));
     }
-
     const init: T = getLocaStorage(name) || initVal;
 
     const [val, setVal] = useState(init);

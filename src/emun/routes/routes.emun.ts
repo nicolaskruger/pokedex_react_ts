@@ -1,7 +1,8 @@
 const ROUTES_ENUM = {
     BATTLE: "/battle",
     MEDIC: "/medic",
-    HOME: "/home"
+    HOME: "/home",
+    INITHIAL_POKEMON: "/inithial-pokemon"
 }
 
 export { ROUTES_ENUM }

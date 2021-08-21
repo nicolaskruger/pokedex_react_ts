@@ -1,0 +1,14 @@
+.inithial-pokemon {
+  background-image: url("./img/background.png");
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.inithial-pokemon__h1 {
+  color: darkred;
+}

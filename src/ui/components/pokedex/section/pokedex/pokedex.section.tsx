@@ -3,6 +3,7 @@ import { connect, ConnectedProps } from "react-redux";
 import { PokemonDomain } from "../../../../../domain"
 import { usePokedex } from "../../../../../hooks";
 import { pokedexProps } from "../../../../../reducer";
+import { store } from "../../../../../store";
 import { ActiveOper, PokeListCommunSection } from "../poke-list-commun/poke-list-commun.section"
 import "./pokedex.section.css";
 
@@ -34,7 +35,8 @@ const PokedexSectio = ({ pokedex }: PokedexSectionProps) => {
     }
 
     useEffect(() => {
-        pokedexHook.setPokedex();
+        if (store.getState().pokedex.count === 0)
+            pokedexHook.setPokedex();
     }, [])
 
     return (
