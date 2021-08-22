@@ -1,0 +1,17 @@
+.trainer {
+  position: absolute;
+  top: 290px;
+  left: 410px;
+  transition: 1.5s;
+  display: flex;
+  align-items: center;
+}
+.trainer-medic {
+  transform: translateX(150px);
+}
+.trainer-arena {
+  transform: translateX(-195px);
+}
+.trainer-pokemon__img {
+  width: 60px;
+}

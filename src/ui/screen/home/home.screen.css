@@ -1,6 +1,12 @@
 .home {
+  position: relative;
   display: flex;
   flex-direction: column;
   height: 100%;
   justify-content: space-between;
+  background-image: url("./img/town.png");
+  background-size: cover;
+}
+.home__img {
+  width: 40px;
 }

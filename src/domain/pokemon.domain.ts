@@ -1,4 +1,5 @@
 type PokemonDomain = {
+    id?: number,
     life?: number,
     name: string,
     nick_name?: string,

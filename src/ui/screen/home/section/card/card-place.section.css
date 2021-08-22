@@ -1,0 +1,19 @@
+.card-place {
+  width: 100px;
+  height: 100px;
+  background-color: brown;
+  border: none;
+  margin: none;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+.card-place__img {
+  height: 50px;
+}
+.card-place__title {
+  margin: 0;
+  color: aquamarine;
+  font-size: 20px;
+  font-weight: bold;
+}

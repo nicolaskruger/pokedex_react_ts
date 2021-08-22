@@ -5,7 +5,8 @@ import { PokedexReducerState } from "../pokedex.state";
 const addPokemon = (state: PokedexReducerState, action: PokedexAction): PokedexReducerState => {
     const pokemon: PokemonDomain = {
         ...action.newPokemon as PokemonDomain,
-        life: 100
+        life: 100,
+        id: Math.random()
     };
 
     return {

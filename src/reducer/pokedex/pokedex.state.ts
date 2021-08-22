@@ -4,7 +4,8 @@ import { getLocalStorage, LOCAL_STORAGE_KEYS } from "../../util";
 
 type PokedexReducerState = {
     pokedex: PokeListDto,
-    pokeList: PokemonDomain[]
+    pokeList: PokemonDomain[],
+    currPokemon: PokemonDomain
 }
 
 const results: PokemonDto[] = []
@@ -18,7 +19,8 @@ const InithialState: PokedexReducerState =
             previous: "",
             results
         },
-        pokeList: []
+        pokeList: [],
+        currPokemon: null
     };
 
 export type { PokedexReducerState }

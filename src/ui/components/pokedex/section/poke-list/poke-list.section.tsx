@@ -1,5 +1,7 @@
 import { useState } from "react"
 import { connect, ConnectedProps } from "react-redux"
+import { PokemonDomain } from "../../../../../domain"
+import { usePokedex } from "../../../../../hooks"
 import { pokedexProps } from "../../../../../reducer"
 import { ActiveOper, PokeListCommunSection } from "../poke-list-commun/poke-list-commun.section"
 
@@ -11,8 +13,9 @@ type PokedexSectionProps = ConnectedProps<typeof connector>
 
 const PokeListS = ({ pokeList }: PokedexSectionProps) => {
 
+    const pokedexHook = usePokedex();
     const MAX_SIZE = 6;
-    const PAGE_SIZE = Math.ceil(pokeList.length / MAX_SIZE) + 1;
+    const PAGE_SIZE = Math.trunc(pokeList.length / MAX_SIZE) + 1;
     const [currPage, setCurrPage] = useState(0);
 
     const hasNext = currPage < (PAGE_SIZE - 1)
@@ -37,13 +40,17 @@ const PokeListS = ({ pokeList }: PokedexSectionProps) => {
 
     const pageable = pokeList.slice(currPage * MAX_SIZE, (currPage + 1) * (MAX_SIZE))
 
+    const handlePokemonClick = (pokemon: PokemonDomain) => {
+        pokedexHook.selectPokemon(pokemon);
+    }
+
     return (
         <div className="PokedexSection" >
             <PokeListCommunSection
                 pokemons={pageable}
                 next={next}
                 prev={prev}
-                onClick={(poke) => { }} />
+                onClick={handlePokemonClick} />
         </div>
     )
 }

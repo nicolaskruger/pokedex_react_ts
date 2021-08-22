@@ -7,7 +7,8 @@
   --pokedex-calc-calc-heigth: calc(100% - var(--pokedex-button-heigth));
 }
 .Pokedex {
-  position: relative;
+  position: absolute;
+  bottom: 0;
   width: 100%;
   height: var(--pokedex-heigth);
   transition: 0.5s;
