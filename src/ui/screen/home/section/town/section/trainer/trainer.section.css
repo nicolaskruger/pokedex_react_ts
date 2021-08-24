@@ -13,5 +13,6 @@
   transform: translateX(-195px);
 }
 .trainer-pokemon__img {
+  transform: scale(1.3);
   width: 60px;
 }

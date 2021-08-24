@@ -5,5 +5,6 @@ import arenaImg from "./img/arena.png";
 export * from "./img/ExpandLess";
 export * from "./img/NextIcon";
 export * from "./img/PreviousIcon";
+export * from "./img/InfoIcon";
 
 export { pokeballImg, joyImg, brockImg, arenaImg }

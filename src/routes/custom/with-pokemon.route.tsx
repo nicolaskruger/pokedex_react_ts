@@ -9,6 +9,8 @@ const WithPokemonRoute: FC<RouteProps> = (props) => {
 
     if (poke.pokeList.length === 0)
         return <Redirect to={ROUTES_ENUM.INITHIAL_POKEMON} />
+    if (poke.battle)
+        return <Redirect to={ROUTES_ENUM.BATTLE} />
     return <Route {...props} />
 }
 

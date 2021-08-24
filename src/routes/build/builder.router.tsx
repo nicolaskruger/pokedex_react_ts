@@ -1,11 +1,11 @@
 import { FC } from "react";
 import { Redirect, RouteProps } from "react-router-dom";
 import { ROUTES_ENUM } from "../../emun";
-import { BattleScreen, HomeScreen, InithialPokemonScreen, MedicScreen } from "../../ui/screen";
+import { AcceptBattleScreen, BattleScreen, HomeScreen, InithialPokemonScreen, MedicScreen } from "../../ui/screen";
 import { WithPokemonRoute } from "../custom/with-pokemon.route";
 import { WithOutPokemonRoute } from "../custom/without-pokemon.route";
 
-const { BATTLE, HOME, MEDIC, INITHIAL_POKEMON } = ROUTES_ENUM;
+const { BATTLE, HOME, MEDIC, INITHIAL_POKEMON, ACCEPT_BATTLE } = ROUTES_ENUM;
 
 type RouteBuild = {
     path: string,
@@ -48,6 +48,12 @@ const RouterBuilder = () => {
             path: "/",
             exact: false,
             compoment: HomeRedirect,
+            CustomRoute: WithPokemonRoute
+        },
+        {
+            path: ACCEPT_BATTLE,
+            exact: true,
+            compoment: AcceptBattleScreen,
             CustomRoute: WithPokemonRoute
         }
     ]
