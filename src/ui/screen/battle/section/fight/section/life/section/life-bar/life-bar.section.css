@@ -1,0 +1,17 @@
+.life-bar-life {
+  background-color: rgb(39, 39, 39);
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  padding: 1px;
+  box-sizing: border-box;
+}
+.life-bar-text {
+  color: hotpink;
+}
+.life-bar-life__div {
+  background-color: green;
+  height: 80%;
+  margin: 0 2px;
+  width: 100%;
+}

@@ -2,3 +2,4 @@ export * from "./set-pokedex.hook.function";
 export * from "./next-pokdex.hook.function";
 export * from "./set-pokedex.hook.function";
 export * from "./add-pokemon.hook.function";
+export * from "./set-enemy.function";

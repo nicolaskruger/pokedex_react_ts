@@ -6,6 +6,7 @@ type PokedexReducerState = {
     pokedex: PokeListDto,
     pokeList: PokemonDomain[],
     currPokemon: PokemonDomain,
+    enemy: PokemonDomain,
     battle: boolean
 }
 
@@ -22,7 +23,8 @@ const InithialState: PokedexReducerState =
         },
         pokeList: [],
         currPokemon: null,
-        battle: false
+        battle: false,
+        enemy: null
     };
 
 export type { PokedexReducerState }

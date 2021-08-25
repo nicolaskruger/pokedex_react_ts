@@ -1,0 +1,1 @@
+export * from "./accept-battle/accept-battle.section";

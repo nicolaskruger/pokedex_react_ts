@@ -13,7 +13,7 @@ type QueryPokemon = {
 const usePokemonApi = () => {
     const instance = usePokedexApi();
 
-    const { POKEMON } = ROUTES_BACKEND_ENUM;
+    const { POKEMON, POKEMON_NUM } = ROUTES_BACKEND_ENUM;
 
     const page = async (query: QueryPokemon): Promise<PokeListDto> => {
         const response: AxiosResponse<PokeListDto> = await instance.get(POKEMON, {
@@ -23,6 +23,13 @@ const usePokemonApi = () => {
         })
         return response.data;
     }
+
+    const getPokemonById = async (id: number): Promise<PokemonDomain> => {
+        const response: AxiosResponse<PokemonDomain> = await instance.get(POKEMON_NUM(id));
+
+        return response.data;
+    }
+
 
     const pageUrl = async (url: string): Promise<PokeListDto> => {
         const response: AxiosResponse<PokeListDto> = await axios.get(url);
@@ -40,7 +47,8 @@ const usePokemonApi = () => {
     return {
         page,
         pageUrl,
-        pokemonUrl
+        pokemonUrl,
+        getPokemonById
     }
 
 }

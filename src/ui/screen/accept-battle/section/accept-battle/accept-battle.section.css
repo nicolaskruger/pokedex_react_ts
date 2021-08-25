@@ -1,0 +1,47 @@
+.accept-baltle-s {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 120px;
+  left: 150px;
+}
+
+@keyframes fade-black {
+  0% {
+    filter: brightness(0%);
+  }
+  40% {
+    filter: brightness(0%);
+  }
+  100% {
+    filter: brightness(100%);
+  }
+}
+
+.accept-baltle-s__img {
+  width: 400px;
+  animation: fade-black 3s forwards;
+}
+
+.accept-baltle-s__button {
+  height: 50px;
+  width: 100%;
+  background-color: rgb(165, 42, 83);
+  cursor: pointer;
+  padding: 0;
+  border: 0;
+  border-radius: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  color: aquamarine;
+}
+.accept-baltle-s__button-run {
+  background-color: rgb(255, 102, 0);
+  color: black;
+  width: 40%;
+}
+.accept-batle-s__button-warper {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+}

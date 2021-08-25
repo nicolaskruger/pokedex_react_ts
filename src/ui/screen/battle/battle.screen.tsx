@@ -1,8 +1,8 @@
+import { FightSection } from "./section"
+
 const BattleScreen = () => {
     return (
-        <div>
-            battle
-        </div>
+        <FightSection />
     )
 }
 

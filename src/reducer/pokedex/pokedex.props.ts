@@ -4,7 +4,8 @@ const pokedexProps = (state: PokedexReducerState) => ({
     pokedex: state.pokedex,
     pokeList: state.pokeList,
     currPokemon: state.currPokemon,
-    battle: state.battle
+    battle: state.battle,
+    enemy: state.enemy
 })
 
 export { pokedexProps }
