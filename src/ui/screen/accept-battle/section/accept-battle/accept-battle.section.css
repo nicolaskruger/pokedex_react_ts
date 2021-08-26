@@ -2,8 +2,8 @@
   position: absolute;
   display: flex;
   flex-direction: column;
-  top: 120px;
-  left: 150px;
+  top: 100px;
+  left: 100px;
 }
 
 @keyframes fade-black {

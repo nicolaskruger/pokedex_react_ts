@@ -1,3 +1,11 @@
+
+enum POKEMON_STATE {
+    HIT,
+    MISS,
+    CAPTURE,
+    DEFAULT
+}
+
 type PokemonDomain = {
     id?: number,
     life?: number,
@@ -8,7 +16,8 @@ type PokemonDomain = {
         back_default: string,
         front_default: string
     }
-    abilities: Ability[]
+    abilities: Ability[],
+    state?: POKEMON_STATE
 }
 type Ability = {
     ability: {
@@ -16,4 +25,5 @@ type Ability = {
     }
 }
 
+export { POKEMON_STATE }
 export type { PokemonDomain }

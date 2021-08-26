@@ -3,4 +3,5 @@
   height: 100%;
   background-image: url("./img/pokemon.png");
   background-size: cover;
+  position: relative;
 }

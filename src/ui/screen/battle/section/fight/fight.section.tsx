@@ -1,7 +1,7 @@
 import "./fight.section.css";
 import { connect, ConnectedProps } from "react-redux"
 import { pokedexProps } from "../../../../../reducer"
-import { BattleDisplaySection, LifeSection, PokemonFightSection } from "./section";
+import { BattleDisplaySection, LifeSection, PokeballSection, PokemonFightSection } from "./section";
 
 const connector = connect(pokedexProps, {});
 
@@ -18,6 +18,7 @@ const FightS = (props: Props) => {
                 <LifeSection className="fight-section__life-enemy" pokemon={enemy} />
                 <PokemonFightSection className="fight-section__ally" back={true} pokemon={currPokemon} />
                 <PokemonFightSection className="fight-section__enemy" back={false} pokemon={enemy} />
+                <PokeballSection />
             </div>
             <BattleDisplaySection />
         </div>

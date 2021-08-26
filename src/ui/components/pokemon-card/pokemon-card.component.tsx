@@ -29,7 +29,7 @@ const PokemonCardComponent = (props: PokemonCardProps) => {
             {pokemon.life && (
                 <div>
                     {pokemon.life}
-                    <LifeBarSection life={pokemon.life} />
+                    <LifeBarSection life={Math.trunc(pokemon.life * 100 / pokemon.base_experience)} />
                 </div>
             )}
 

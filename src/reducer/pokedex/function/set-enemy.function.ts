@@ -1,12 +1,12 @@
-import { PokemonDomain } from "../../../domain";
-import { MAX_LIFE } from "../const";
+import { PokemonDomain, POKEMON_STATE } from "../../../domain";
 import { PokedexAction } from "../pokedex.action";
 import { PokedexReducerState } from "../pokedex.state";
 
 const setEnemy = (state: PokedexReducerState, action: PokedexAction): PokedexReducerState => {
     const pokemon: PokemonDomain = {
         ...action.newPokemon as PokemonDomain,
-        life: MAX_LIFE
+        life: action.newPokemon?.base_experience,
+        state: POKEMON_STATE.DEFAULT
     };
     return {
         ...state,

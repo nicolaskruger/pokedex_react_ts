@@ -23,6 +23,9 @@ const LifeSection = (props: LifeProps) => {
                     </span>
                 </div>
                 <LifeBarSection life={pokemon.life as number} />
+                <span>
+                    {`${pokemon.life}/${pokemon.base_experience} life`}
+                </span>
             </div>
         </div>
     )

@@ -1,0 +1,117 @@
+.pokemon-fight__div {
+  position: relative;
+}
+.pokemon-fight__img {
+  width: 300px;
+}
+.pokemon-fight__hit {
+  animation: HIT 0.5s forwards;
+}
+.pokemon-fight__miss {
+  animation: MISS 0.5s forwards;
+}
+.pokemon-fight {
+  display: flex;
+  flex-direction: column;
+}
+.pokemon-fight__capture {
+  animation: CAPTURE 3s forwards;
+}
+.pokemon-fight__miss-word {
+  position: absolute;
+  top: 120px;
+  right: 100px;
+  color: white;
+  font-weight: bold;
+  text-shadow: -1px -1px 0px rgb(0, 0, 0), -1px rgb(0, 0, 0) 0px rgb(0, 0, 0),
+    1px -1px 0px rgb(0, 0, 0), 1px 0px 0px rgb(0, 0, 0);
+  animation: MISS_WORD 2s forwards;
+}
+@keyframes CAPTURE {
+  0% {
+    opacity: 1;
+    filter: brightness(100%);
+  }
+  59% {
+    opacity: 1;
+    filter: brightness(100%);
+  }
+  60% {
+    opacity: 1;
+    filter: brightness(0) invert(1);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes MISS_WORD {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+}
+
+@keyframes MISS {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-20px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes HIT {
+  0% {
+    filter: brightness(0) invert(1);
+  }
+  15% {
+    filter: brightness(0) invert(1);
+  }
+  16% {
+    filter: none;
+  }
+  30% {
+    filter: none;
+  }
+  31% {
+    filter: brightness(0) invert(1);
+  }
+  45% {
+    filter: brightness(0) invert(1);
+  }
+  46% {
+    filter: none;
+  }
+  60% {
+    filter: none;
+  }
+  61% {
+    filter: brightness(0) invert(1);
+  }
+  75% {
+    filter: brightness(0) invert(1);
+  }
+  76% {
+    filter: none;
+  }
+  90% {
+    filter: none;
+  }
+  91% {
+    filter: brightness(0) invert(1);
+  }
+  99% {
+    filter: brightness(0) invert(1);
+  }
+  100% {
+    filter: none;
+  }
+}

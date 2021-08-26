@@ -1,0 +1,87 @@
+.pokeball-section__warpper {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  bottom: -60px;
+  left: 100px;
+}
+.pokeball-section__anime-warper {
+  animation: CATH-X 3s infinite;
+}
+.pokeball-section__anime-section {
+  animation: CATH-Y 3s infinite;
+}
+.pokeball-section__img {
+  animation: POKEBALL_ROTATE 3s infinite;
+}
+.pokeball-section {
+  display: flex;
+  flex-direction: column;
+}
+.pokeball-section__img {
+  width: 50px;
+}
+.pokeball-text {
+  animation: POKEBALL_TEXT 3s infinite;
+  font-weight: bold;
+}
+.pokeball__take {
+  color: green;
+}
+.pokeball__n__take {
+  color: red;
+}
+
+@keyframes POKEBALL_ROTATE {
+  0% {
+    transform: rotate(0deg);
+  }
+  70% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes POKEBALL_TEXT {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes CATH-Y {
+  0% {
+    transform: translateY(0) rotate(30deg);
+  }
+  35% {
+    transform: translateY(-300px);
+  }
+  70% {
+    transform: translateY(-250px);
+  }
+  80% {
+    transform: translateY(-300px);
+  }
+  100% {
+    transform: translateY(-200px);
+  }
+}
+
+@keyframes CATH-X {
+  0% {
+    transform: translateX(0);
+  }
+
+  70% {
+    transform: translateX(600px);
+  }
+  100% {
+    transform: translateX(600px);
+  }
+}
