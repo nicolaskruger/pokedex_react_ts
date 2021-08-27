@@ -1,4 +1,4 @@
-import { useAddPokemon, useNextPokedex, useSetPokedex, useSetEnemy } from "./function"
+import { useAddPokemon, useNextPokedex, useSetPokedex, useSetEnemy, useAllyAtack, useEnemyAtack, useStartBattle, useRun } from "./function"
 import { usePrevPokedex } from "./function/prev-pokedex.hook.function";
 import { useSelectPokemon } from "./function/select-pokemon.hook.function";
 import { useGetInithislPokemons } from "./function/set-inithial-pokemons.hook.function";
@@ -19,6 +19,14 @@ const usePokedex = () => {
 
     const setEnemy = useSetEnemy();
 
+    const allyAtack = useAllyAtack();
+
+    const enemyAtack = useEnemyAtack();
+
+    const startBattle = useStartBattle();
+
+    const run = useRun();
+
     return {
         setPokedex,
         prevPokedex,
@@ -26,7 +34,11 @@ const usePokedex = () => {
         getInithialPokemon,
         addPokemon,
         selectPokemon,
-        setEnemy
+        setEnemy,
+        allyAtack,
+        enemyAtack,
+        startBattle,
+        run
     }
 }
 

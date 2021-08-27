@@ -45,17 +45,17 @@ const RouterBuilder = () => {
             CustomRoute: WithOutPokemonRoute
         },
         {
-            path: "/",
-            exact: false,
-            compoment: HomeRedirect,
-            CustomRoute: WithPokemonRoute
-        },
-        {
             path: ACCEPT_BATTLE,
             exact: true,
             compoment: AcceptBattleScreen,
             CustomRoute: WithPokemonRoute
-        }
+        },
+        {
+            path: "/",
+            exact: false,
+            compoment: HomeScreen,
+            CustomRoute: WithPokemonRoute
+        },
     ]
 
     return (

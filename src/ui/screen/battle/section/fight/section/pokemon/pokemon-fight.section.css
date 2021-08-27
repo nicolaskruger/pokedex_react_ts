@@ -17,6 +17,9 @@
 .pokemon-fight__capture {
   animation: CAPTURE 3s forwards;
 }
+.pokemon-fight__dead {
+  animation: CAPTURE 3s forwards;
+}
 .pokemon-fight__miss-word {
   position: absolute;
   top: 120px;

@@ -5,7 +5,8 @@ import { POKEDEX_TYPE } from "./pokedex.type"
 type PokedexAction = {
     type: POKEDEX_TYPE,
     pokedex?: PokeListDto,
-    newPokemon?: PokemonDomain
+    newPokemon?: PokemonDomain,
+    damage?: number
 }
 
 export type { PokedexAction }

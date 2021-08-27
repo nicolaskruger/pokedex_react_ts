@@ -3,3 +3,8 @@ export * from "./set-pokedex.function";
 export * from "./add-pokemon.function";
 export * from "./select-pokemon.function";
 export * from "./set-enemy.function";
+export * from "./atack.function";
+export * from "./ally-atack.function";
+export * from "./end-battle-condition.function";
+export * from "./start-battle.function";
+export * from "./run-pokemon.function";

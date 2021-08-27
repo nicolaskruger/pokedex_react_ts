@@ -1,0 +1,25 @@
+.battle-button {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 2px;
+  gap: 5px;
+}
+.battle-button__button {
+  cursor: pointer;
+  border: none;
+  font-size: 30px;
+  border-radius: 30px;
+}
+.battle-button__button-blue {
+  border: blue solid 5px;
+  background-color: lightblue;
+}
+.battle-button__button-red {
+  border: red solid 5px;
+  background-color: lightcoral;
+}
+.battle-button__button-orange {
+  border: green solid 5px;
+  background-color: lawngreen;
+}

@@ -22,7 +22,7 @@ const LifeSection = (props: LifeProps) => {
                         lv {pokemon.base_experience}
                     </span>
                 </div>
-                <LifeBarSection life={pokemon.life as number} />
+                <LifeBarSection life={Math.trunc(pokemon.life as number * 100 / pokemon.base_experience)} />
                 <span>
                     {`${pokemon.life}/${pokemon.base_experience} life`}
                 </span>

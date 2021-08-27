@@ -13,10 +13,10 @@ const LifeBarSection = (props: LifeProps) => {
             <span className="life-bar-text">
                 HP
             </span>
-            <div className="life-bar-life__div">
+            <div style={{ width: `${life}%` }} className="life-bar-life__div">
 
             </div>
-        </div>
+        </div >
     )
 }
 

@@ -28,7 +28,6 @@ const AcceptBattleS = (props: Props) => {
     }
 
     useEffect(() => {
-
         setEnemy();
     }, [])
 
@@ -38,6 +37,8 @@ const AcceptBattleS = (props: Props) => {
 
     const handleBattle = () => {
         history.push(ROUTES_ENUM.BATTLE);
+
+        pokedex.startBattle();
     }
 
     return (

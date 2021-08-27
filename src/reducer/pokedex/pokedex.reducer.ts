@@ -1,4 +1,5 @@
-import { addPokemon, selectPokemon, setEnemy, setPokedex } from "./function";
+import { addPokemon, allyAtack, run, selectPokemon, setEnemy, setPokedex, startBattle } from "./function";
+import { enemyAtack } from "./function/enemy-atack.function";
 import { PokedexAction } from "./pokedex.action";
 import { PokedexReducerState } from "./pokedex.state";
 import { POKEDEX_TYPE } from "./pokedex.type";
@@ -8,7 +9,15 @@ const pokedexReducer = (state: PokedexReducerState | undefined, action: PokedexA
 
     const realState = state as PokedexReducerState;
 
-    const { SET_POKEDEX, ADD_POKEMON, SET_CURR_POKEMON, SET_ENEMY } = POKEDEX_TYPE;
+    const { START_BATTLE,
+        SET_POKEDEX,
+        ADD_POKEMON,
+        SET_CURR_POKEMON,
+        SET_ENEMY,
+        ALLY_ATACK,
+        ENEMY_ATACK,
+        RUN
+    } = POKEDEX_TYPE;
 
     const { type } = action;
 
@@ -22,6 +31,14 @@ const pokedexReducer = (state: PokedexReducerState | undefined, action: PokedexA
             return selectPokemon(realState, action);
         case SET_ENEMY:
             return setEnemy(realState, action);
+        case ALLY_ATACK:
+            return allyAtack(realState, action);
+        case ENEMY_ATACK:
+            return enemyAtack(realState, action);
+        case START_BATTLE:
+            return startBattle(realState, action);
+        case RUN:
+            return run(realState, action);
         default:
             return { ...realState }
     }

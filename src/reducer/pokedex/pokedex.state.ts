@@ -7,7 +7,7 @@ type PokedexReducerState = {
     pokeList: PokemonDomain[],
     currPokemon: PokemonDomain,
     enemy: PokemonDomain,
-    battle: boolean
+    battle: boolean,
 }
 
 const results: PokemonDto[] = []

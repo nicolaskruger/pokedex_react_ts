@@ -1,7 +1,12 @@
 .battle-display {
   position: absolute;
   bottom: 0;
+  display: flex;
   width: 100%;
   height: 30%;
-  background-color: ivory;
+  width: 100%;
+  gap: 5px;
+  border-top: 5px solid black;
+  background-color: rgb(189, 189, 153);
+  padding: 5px 5px 0 5px;
 }

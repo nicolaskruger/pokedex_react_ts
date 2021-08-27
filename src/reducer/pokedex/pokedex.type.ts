@@ -2,7 +2,11 @@ enum POKEDEX_TYPE {
     SET_POKEDEX,
     ADD_POKEMON,
     SET_CURR_POKEMON,
-    SET_ENEMY
+    SET_ENEMY,
+    ALLY_ATACK,
+    ENEMY_ATACK,
+    START_BATTLE,
+    RUN
 }
 
 export { POKEDEX_TYPE }
