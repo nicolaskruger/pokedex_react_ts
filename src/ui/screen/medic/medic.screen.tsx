@@ -1,7 +1,11 @@
+import { HospitalSection, WaitingRoomSection } from "./section"
+import "./medic.section.css"
+
 const MedicScreen = () => {
     return (
-        <div>
-            medic
+        <div className="medic">
+            <HospitalSection />
+            <WaitingRoomSection />
         </div>
     )
 }

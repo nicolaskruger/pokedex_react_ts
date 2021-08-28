@@ -6,7 +6,10 @@ enum POKEDEX_TYPE {
     ALLY_ATACK,
     ENEMY_ATACK,
     START_BATTLE,
-    RUN
+    RUN,
+    CAPTURE,
+    GOT_TO_MEDIC,
+    GO_TO_POKEDEX,
 }
 
 export { POKEDEX_TYPE }

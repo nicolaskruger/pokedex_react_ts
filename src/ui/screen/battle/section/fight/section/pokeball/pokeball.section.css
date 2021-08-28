@@ -6,13 +6,13 @@
   left: 100px;
 }
 .pokeball-section__anime-warper {
-  animation: CATH-X 3s infinite;
+  animation: CATH-X 3s forwards;
 }
 .pokeball-section__anime-section {
-  animation: CATH-Y 3s infinite;
+  animation: CATH-Y 3s forwards;
 }
 .pokeball-section__img {
-  animation: POKEBALL_ROTATE 3s infinite;
+  animation: POKEBALL_ROTATE 3s forwards;
 }
 .pokeball-section {
   display: flex;
@@ -22,7 +22,7 @@
   width: 50px;
 }
 .pokeball-text {
-  animation: POKEBALL_TEXT 3s infinite;
+  animation: POKEBALL_TEXT 3s forwards;
   font-weight: bold;
 }
 .pokeball__take {

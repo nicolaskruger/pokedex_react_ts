@@ -7,3 +7,6 @@ export * from "./ally-atack.hook.function";
 export * from "./enemy-atack.hook.function";
 export * from "./start-battle.hook.function";
 export * from "./run.hook.function";
+export * from "./capture-pokemon.hook.function";
+export * from "./got-to-medic.hook.function";
+export * from "./go-to-pokedex-hookfunction";

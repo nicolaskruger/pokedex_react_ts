@@ -17,7 +17,8 @@ type PokemonDomain = {
         front_default: string
     }
     abilities: Ability[],
-    state?: POKEMON_STATE
+    state?: POKEMON_STATE,
+    timeToRecover?: Date
 }
 type Ability = {
     ability: {

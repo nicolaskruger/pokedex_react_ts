@@ -45,6 +45,9 @@ const TownS = (props: Props) => {
 
     const handleClickMedic = () => {
         setCurrState(TRAINER_STATE.MEDIC)
+        setTimeout(() => {
+            history.push(ROUTES_ENUM.MEDIC);
+        }, 2000);
     }
 
     return (

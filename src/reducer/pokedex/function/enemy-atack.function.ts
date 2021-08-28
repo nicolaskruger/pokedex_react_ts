@@ -1,4 +1,4 @@
-import { POKEMON_STATE } from "../../../domain";
+import { PokemonDomain, POKEMON_STATE } from "../../../domain";
 import { PokedexAction } from "../pokedex.action";
 import { PokedexReducerState } from "../pokedex.state";
 import { atack } from "./atack.function";
@@ -6,11 +6,14 @@ import { endBattleCondition } from "./end-battle-condition.function";
 
 const enemyAtack = (state: PokedexReducerState, action: PokedexAction): PokedexReducerState => {
 
-    const damage = Math.trunc(Math.random() * state.enemy.base_experience / 2);
+    const enemy = state.enemy as PokemonDomain;
+
+    const damage = Math.trunc(Math.random() * enemy.base_experience / 2);
 
     if (!state.battle) {
         return {
-            ...state
+            ...state,
+            launch: false
         }
     }
 
@@ -18,10 +21,10 @@ const enemyAtack = (state: PokedexReducerState, action: PokedexAction): PokedexR
     return endBattleCondition({
         ...state,
         enemy: {
-            ...state.enemy,
+            ...enemy,
             state: POKEMON_STATE.DEFAULT
         },
-        currPokemon: atack(damage, state.currPokemon)
+        currPokemon: atack(damage, state.currPokemon as PokemonDomain)
     })
 }
 

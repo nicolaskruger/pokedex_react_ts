@@ -1,9 +1,16 @@
 .accept-baltle-s {
   position: absolute;
   display: flex;
+  width: 100%;
   flex-direction: column;
-  top: 100px;
-  left: 100px;
+  top: 0px;
+  left: 0px;
+}
+
+.curr-pokemon {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 @keyframes fade-black {
@@ -19,6 +26,8 @@
 }
 
 .accept-baltle-s__img {
+  margin-top: 80px;
+  margin-left: 90px;
   width: 400px;
   animation: fade-black 3s forwards;
 }
@@ -42,6 +51,7 @@
 }
 .accept-batle-s__button-warper {
   display: flex;
-  width: 100%;
+  margin-left: 90px;
+  width: 400px;
   gap: 10px;
 }

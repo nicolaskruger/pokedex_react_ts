@@ -43,6 +43,7 @@ const AcceptBattleS = (props: Props) => {
 
     return (
         <div className="accept-baltle-s">
+            <img className="curr-pokemon" src={props.currPokemon.sprites.front_default} alt="" />
             <img className="accept-baltle-s__img" src={props.enemy?.sprites.front_default} alt="" />
 
             <div className="accept-batle-s__button-warper">
@@ -53,6 +54,7 @@ const AcceptBattleS = (props: Props) => {
                     fight
                 </button>
             </div>
+
         </div>
     )
 }

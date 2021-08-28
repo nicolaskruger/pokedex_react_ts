@@ -1,4 +1,4 @@
-import { POKEMON_STATE } from "../../../domain";
+import { PokemonDomain, POKEMON_STATE } from "../../../domain";
 import { PokedexAction } from "../pokedex.action";
 import { PokedexReducerState } from "../pokedex.state";
 import { atack } from "./atack.function";
@@ -17,10 +17,10 @@ const allyAtack = (state: PokedexReducerState, action: PokedexAction): PokedexRe
     return endBattleCondition({
         ...state,
         currPokemon: {
-            ...state.currPokemon,
+            ...state.currPokemon as PokemonDomain,
             state: POKEMON_STATE.DEFAULT
         },
-        enemy: atack(damage, state.enemy)
+        enemy: atack(damage, state.enemy as PokemonDomain)
     })
 }
 

@@ -8,6 +8,8 @@ type PokedexReducerState = {
     currPokemon: PokemonDomain,
     enemy: PokemonDomain,
     battle: boolean,
+    launch: boolean,
+    medic: PokemonDomain[]
 }
 
 const results: PokemonDto[] = []
@@ -24,7 +26,9 @@ const InithialState: PokedexReducerState =
         pokeList: [],
         currPokemon: null,
         battle: false,
-        enemy: null
+        enemy: null,
+        launch: false,
+        medic: []
     };
 
 export type { PokedexReducerState }

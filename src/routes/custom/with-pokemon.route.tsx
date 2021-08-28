@@ -9,7 +9,7 @@ const WithPokemonRoute: FC<RouteProps> = (props) => {
 
     const location = useLocation();
 
-    if (poke.pokeList.length === 0)
+    if (poke.pokeList.length === 0 && poke.medic.length === 0)
         return <Redirect to={ROUTES_ENUM.INITHIAL_POKEMON} />
     if (poke.battle && location.pathname !== ROUTES_ENUM.BATTLE)
         return <Redirect to={ROUTES_ENUM.BATTLE} />

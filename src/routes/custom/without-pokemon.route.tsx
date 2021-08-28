@@ -5,7 +5,7 @@ import { store } from "../../store";
 
 const WithOutPokemonRoute: FC<RouteProps> = (props) => {
 
-    if (store.getState().pokeList.length > 0)
+    if (store.getState().pokeList.length > 0 && store.getState().medic.length > 0)
         return <Redirect to={ROUTES_ENUM.HOME} />
 
     return <Route {...props} />

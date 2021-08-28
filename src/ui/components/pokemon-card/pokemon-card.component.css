@@ -4,3 +4,9 @@
   align-items: center;
   justify-content: center;
 }
+.pokemon-card__finish {
+  color: green;
+}
+.pokemon-card__not-finish {
+  color: red;
+}

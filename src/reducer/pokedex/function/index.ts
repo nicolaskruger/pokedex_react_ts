@@ -8,3 +8,7 @@ export * from "./ally-atack.function";
 export * from "./end-battle-condition.function";
 export * from "./start-battle.function";
 export * from "./run-pokemon.function";
+export * from "./capture-pokemon.function";
+export * from "./go-to-medic.function";
+export * from "./go-to-pokedex.function";
+export * from "./def-list-curr-pokemon.function";

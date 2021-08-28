@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { connect, ConnectedProps } from "react-redux";
+import { PokemonDomain } from "../../../../../../../../../domain";
 import { usePokedex } from "../../../../../../../../../hooks";
 import { pokedexProps } from "../../../../../../../../../reducer";
 import { EnumDictionary } from "../../../../../../../../../util";
@@ -25,14 +26,16 @@ const BattleSelectS = (props: BattleSelectProps) => {
 
     const { DEF, POWER } = BATTLE_SECTION;
 
-    const { state, currPokemon } = props;
+    const { state, currPokemon: a } = props;
+
+    const currPokemon = a as PokemonDomain
 
     const pokedex = usePokedex();
 
     const DefMsg = () => {
         return (
             <span className="battle-select__def">
-                what should you do {currPokemon.name.toLocaleUpperCase()} ?
+                what should you do {currPokemon?.name.toLocaleUpperCase()} ?
             </span>
         )
     }
