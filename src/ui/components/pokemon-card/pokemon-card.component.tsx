@@ -26,7 +26,7 @@ const PokemonCardComponent = (props: PokemonCardProps) => {
 
     const sec = () => Math.trunc((newTime.getTime() - realTime.getTime()) / 1000);
 
-    const times = () => sec() <= 0 ? "Ok !!!" : `${sec} s`;
+    const times = () => sec() <= 0 ? "Ok !!!" : `${sec()} s`;
 
     return (
         <div className={`pokemon-card ${div}`}>
@@ -46,7 +46,7 @@ const PokemonCardComponent = (props: PokemonCardProps) => {
             {
                 time && (
                     <div className={sec() <= 0 ? `pokemon-card__finish` : `pokemon-card__not-finish`}>
-                        {times}
+                        {times()}
                     </div>
                 )
             }

@@ -1,3 +1,4 @@
+import { POKEMON_STATE } from "../../../domain";
 import { PokedexReducerState } from "../pokedex.state";
 
 const endBattleCondition = (state: PokedexReducerState): PokedexReducerState => {
@@ -12,7 +13,8 @@ const endBattleCondition = (state: PokedexReducerState): PokedexReducerState => 
             pokeList: state.pokeList.map(pokemon => {
                 if (pokemon.id === state.currPokemon.id)
                     return {
-                        ...state.currPokemon
+                        ...state.currPokemon,
+                        state: POKEMON_STATE.DEFAULT
                     }
                 return {
                     ...pokemon

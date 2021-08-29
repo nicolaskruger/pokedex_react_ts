@@ -6,5 +6,6 @@ export * from "./img/ExpandLess";
 export * from "./img/NextIcon";
 export * from "./img/PreviousIcon";
 export * from "./img/InfoIcon";
+export * from "./img/homeIcon"
 
 export { pokeballImg, joyImg, brockImg, arenaImg }

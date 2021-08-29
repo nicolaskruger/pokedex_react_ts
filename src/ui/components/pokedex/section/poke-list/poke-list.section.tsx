@@ -41,7 +41,13 @@ const PokeListS = ({ pokeList }: PokedexSectionProps) => {
     const pageable = pokeList.slice(currPage * MAX_SIZE, (currPage + 1) * (MAX_SIZE))
 
     const handlePokemonClick = (pokemon: PokemonDomain) => {
-        pokedexHook.selectPokemon(pokemon);
+        try {
+
+            pokedexHook.selectPokemon(pokemon);
+        }
+        catch (e) {
+
+        }
     }
 
     return (

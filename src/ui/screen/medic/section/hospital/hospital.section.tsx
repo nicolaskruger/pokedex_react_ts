@@ -26,7 +26,7 @@ const HospitaS = (props: Props) => {
     useEffect(() => {
         const id = setInterval(() => {
             setCurrTime(new Date())
-        }, 1000)
+        }, 500)
 
         return () => {
             clearInterval(id);

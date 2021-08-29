@@ -21,6 +21,10 @@ const capture = (state: PokedexReducerState, action: PokedexAction): PokedexRedu
             ...state,
             battle: false,
             launch: true,
+            currPokemon: {
+                ...state.currPokemon,
+                state: POKEMON_STATE.DEFAULT
+            },
             enemy: {
                 ...enemy,
                 state: POKEMON_STATE.CAPTURE
@@ -35,6 +39,10 @@ const capture = (state: PokedexReducerState, action: PokedexAction): PokedexRedu
             ...enemy,
             state: POKEMON_STATE.CAPTURE
         },
+        currPokemon: {
+            ...state.currPokemon,
+            state: POKEMON_STATE.DEFAULT
+        }
     }
 }
 

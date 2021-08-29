@@ -52,7 +52,7 @@ const RouterBuilder = () => {
         },
         {
             path: "/",
-            exact: true,
+            exact: false,
             compoment: HomeScreen,
             CustomRoute: WithPokemonRoute
         },

@@ -5,7 +5,7 @@ import { PokedexReducerState } from "../pokedex.state";
 const goToPokedex = (state: PokedexReducerState, action: PokedexAction): PokedexReducerState => {
 
 
-    if (new Date() > new Date(action.newPokemon?.timeToRecover as Date)) {
+    if (new Date() <= new Date(action.newPokemon?.timeToRecover as Date)) {
         return {
             ...state
         }

@@ -13,7 +13,11 @@ const goToMedic = (state: PokedexReducerState, action: PokedexAction): PokedexRe
     }
 
     const date = new Date();
-    date.setSeconds(date.getSeconds() + Math.trunc((pokemon.life as number) / pokemon.base_experience * 5))
+
+    const life = pokemon.life as number;
+    const base_experience = pokemon.base_experience;
+
+    date.setSeconds(date.getSeconds() + Math.trunc((base_experience - life) / pokemon.base_experience * 5))
 
     const newPokemon: PokemonDomain = {
         ...action.newPokemon as PokemonDomain,
