@@ -4,7 +4,16 @@ import { PokedexReducerState } from "../pokedex.state";
 
 const run = (state: PokedexReducerState, action: PokedexAction): PokedexReducerState => {
 
-    const currPokemon = state.currPokemon as PokemonDomain;
+    const currPokemon: PokemonDomain = {
+        ...(state.currPokemon as PokemonDomain),
+        life: Math.trunc(state.currPokemon.life as number / 2)
+    };
+
+    const pokeList = state.pokeList.map(poke => {
+        if (poke.id === currPokemon.id)
+            return currPokemon;
+        return poke
+    })
 
     return (
         {
@@ -13,7 +22,8 @@ const run = (state: PokedexReducerState, action: PokedexAction): PokedexReducerS
             currPokemon: {
                 ...currPokemon,
                 life: Math.trunc((currPokemon.life as number) / 2)
-            }
+            },
+            pokeList
         }
     )
 }
