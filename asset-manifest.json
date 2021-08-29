@@ -1,23 +1,27 @@
 {
   "files": {
-    "main.css": "/pokedex_react_ts/static/css/main.a617e044.chunk.css",
-    "main.js": "/pokedex_react_ts/static/js/main.dc15e6a4.chunk.js",
-    "main.js.map": "/pokedex_react_ts/static/js/main.dc15e6a4.chunk.js.map",
-    "runtime-main.js": "/pokedex_react_ts/static/js/runtime-main.498c2d3c.js",
-    "runtime-main.js.map": "/pokedex_react_ts/static/js/runtime-main.498c2d3c.js.map",
-    "static/js/2.bac3d545.chunk.js": "/pokedex_react_ts/static/js/2.bac3d545.chunk.js",
-    "static/js/2.bac3d545.chunk.js.map": "/pokedex_react_ts/static/js/2.bac3d545.chunk.js.map",
-    "static/js/3.59d84f71.chunk.js": "/pokedex_react_ts/static/js/3.59d84f71.chunk.js",
-    "static/js/3.59d84f71.chunk.js.map": "/pokedex_react_ts/static/js/3.59d84f71.chunk.js.map",
+    "main.css": "/pokedex_react_ts/static/css/main.eb782b59.chunk.css",
+    "main.js": "/pokedex_react_ts/static/js/main.c3691011.chunk.js",
+    "main.js.map": "/pokedex_react_ts/static/js/main.c3691011.chunk.js.map",
+    "runtime-main.js": "/pokedex_react_ts/static/js/runtime-main.5ee35154.js",
+    "runtime-main.js.map": "/pokedex_react_ts/static/js/runtime-main.5ee35154.js.map",
+    "static/js/2.8cba2b59.chunk.js": "/pokedex_react_ts/static/js/2.8cba2b59.chunk.js",
+    "static/js/2.8cba2b59.chunk.js.map": "/pokedex_react_ts/static/js/2.8cba2b59.chunk.js.map",
     "index.html": "/pokedex_react_ts/index.html",
-    "static/css/main.a617e044.chunk.css.map": "/pokedex_react_ts/static/css/main.a617e044.chunk.css.map",
-    "static/js/2.bac3d545.chunk.js.LICENSE.txt": "/pokedex_react_ts/static/js/2.bac3d545.chunk.js.LICENSE.txt",
-    "static/media/logo.6ce24c58.svg": "/pokedex_react_ts/static/media/logo.6ce24c58.svg"
+    "static/css/main.eb782b59.chunk.css.map": "/pokedex_react_ts/static/css/main.eb782b59.chunk.css.map",
+    "static/js/2.8cba2b59.chunk.js.LICENSE.txt": "/pokedex_react_ts/static/js/2.8cba2b59.chunk.js.LICENSE.txt",
+    "static/media/arena.9efd3d5e.png": "/pokedex_react_ts/static/media/arena.9efd3d5e.png",
+    "static/media/fight.section.css": "/pokedex_react_ts/static/media/backgorund.97c6e681.png",
+    "static/media/brock.41b4f74b.png": "/pokedex_react_ts/static/media/brock.41b4f74b.png",
+    "static/media/joy.002579a1.png": "/pokedex_react_ts/static/media/joy.002579a1.png",
+    "static/media/pokeball.7b492a23.png": "/pokedex_react_ts/static/media/pokeball.7b492a23.png",
+    "static/media/App.css": "/pokedex_react_ts/static/media/pokemon.d860c3b9.jpg",
+    "static/media/accept-battle.screen.css": "/pokedex_react_ts/static/media/pokemon.e77cd19d.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.498c2d3c.js",
-    "static/js/2.bac3d545.chunk.js",
-    "static/css/main.a617e044.chunk.css",
-    "static/js/main.dc15e6a4.chunk.js"
+    "static/js/runtime-main.5ee35154.js",
+    "static/js/2.8cba2b59.chunk.js",
+    "static/css/main.eb782b59.chunk.css",
+    "static/js/main.c3691011.chunk.js"
   ]
 }
