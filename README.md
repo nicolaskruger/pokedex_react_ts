@@ -10,7 +10,7 @@
 
 ## :book: Description
 
-this repo is a simple CRUD(create, read, update, delete) of seling motorcycle web app.
+this repo is a simple pokemon battle game
 
 ## :hammer_and_wrench: Technology
 
