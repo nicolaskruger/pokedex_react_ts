@@ -40,4 +40,4 @@ npm start
 
 ## :spider_web: Site
 
-[link](https://github.com/nicolaskruger/pokedex_react_ts)
+[link](https://nicolaskruger.github.io/pokedex_react_ts/)
