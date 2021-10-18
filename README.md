@@ -10,7 +10,7 @@
 
 ## :book: Description
 
-this repo is a simple CRUD(create, read, update, delete) of seling motorcycle web app.
+this repo is a simple pokemon battle game
 
 ## :hammer_and_wrench: Technology
 
@@ -40,4 +40,4 @@ npm start
 
 ## :spider_web: Site
 
-[link](https://github.com/nicolaskruger/pokedex_react_ts)
+[link](https://nicolaskruger.github.io/pokedex_react_ts/)
